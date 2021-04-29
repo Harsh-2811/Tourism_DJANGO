@@ -1,0 +1,126 @@
+{% extends 'basic.html' %}
+{%  load static %}
+
+{% block body %}
+ <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url({% static 'images/bg_2.jpg' %});">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+      <div class="col-md-9 ftco-animate pb-5 text-center">
+       <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span>Blog <i class="fa fa-chevron-right"></i></span></p>
+       <h1 class="mb-0 bread">Blog</h1>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row d-flex">
+        {% for blog in blogs %}
+        <div class="col-md-4 d-flex ftco-animate">
+               <div class="blog-entry justify-content-end">
+                <a href="/blogs/{{blog.slug}}" class="block-20" style="background-image: url({{blog.image.url}});">
+                </a>
+                <div class="text">
+                 <div class="d-flex align-items-center mb-4 topp">
+                  <div class="one">
+                   <span class="day" style="font-size:2rem">{{blog.date.day}}</span>
+                 </div>
+                 <div class="two">
+                   <span class="yr">{{blog.date.year}}</span>
+                   <span class="mos">{{blog.date|date:"F"}}</span>
+                 </div>
+               </div>
+               <h3 class="heading"><a href="#">{{blog.title}}</a></h3>
+               <p>{{blog.content |safe| truncatewords:30}}</p>
+               <p><a href="#" class="btn btn-primary">Read more</a></p>
+             </div>
+           </div>
+        </div>
+        {% endfor %}
+</div>
+<div class="row mt-5">
+  <div class="col text-center">
+    <div class="block-27">
+      {% if blogs.has_other_pages %}
+          <ul>
+              {% if blogs.has_previous %}
+                <li><a href="?page={{blogs.previous_page_number}}">&lt;</a></li>
+              {% else %}
+               <li class="disabled" ><a >&lt;</a></li>
+              {% endif %}
+              {% for i in blogs.paginator.page_range %}
+                {% if blogs.number == i%}
+                        <li class="active"><a href="#">{{i}}</a></li>
+                {% else %}
+                        <li class=""><a href="?page={{i}}">{{i}}</a></li>
+                {% endif %}
+
+              {% endfor %}
+                {% if blogs.has_next %}
+                <li><a href="?page={{blogs.next_page_number}}">&gt;</a></li>
+              {% else %}
+               <li class="disabled" ><a >&gt;</a></li>
+              {% endif %}
+
+          </ul>
+            {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+{% include 'messages.html'%}
+<section class="ftco-section contact-section ftco-no-pt">
+  <div class="container">
+     {% if not user.is_authenticated%}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong id="g_msg">Make Login to Post Blog </strong>
+
+    </div>
+      {%else%}
+      <h2 class="text-center" style="font-size:1.5rem;font-weight:bold;color:#f15d30">Post Blog</h2>
+
+      <div class="row block-9">
+      <div class="col-md-12 order-md-last d-flex">
+        <form action="/blogs/" class="bg-light p-5 contact-form" method="post">{% csrf_token %}
+          <div class="form-group">
+            <input type="text" class="form-control" name="title" placeholder="Blog Title">
+          </div>
+          <div class="form-group">
+            <textarea name="content" id="" cols="30" rows="7" class="form-control" placeholder="Blog Content"></textarea>
+          </div>
+           <div class="form-group">
+            <input type="file" class="form-control" name="image" placeholder="Your Blog Image">
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Submit Blog" class="btn btn-primary py-3 px-5">
+          </div>
+        </form>
+
+      </div>
+
+
+   </div>
+{% endif %}
+ </div>
+</section>
+
+<section class="ftco-intro ftco-section ftco-no-pt">
+ <div class="container">
+  <div class="row justify-content-center">
+   <div class="col-md-12 text-center">
+    <div class="img"  style="background-image: url({% static 'images/bg_2.jpg' %});">
+     <div class="overlay"></div>
+     <h2>We Are Pacific A Travel Agency</h2>
+     <p>We can manage your dream building A small river named Duden flows by their place</p>
+     <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+   </div>
+ </div>
+</div>
+</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,283 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block style %}
+<style>
+    .project-tab {
+    padding: 10%;
+    margin-top: -8%;
+}
+.project-tab #tabs{
+    background: #007b5e;
+    color: #eee;
+}
+.project-tab #tabs h6.section-title{
+    color: #eee;
+}
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f15d30;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+.project-tab .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+.project-tab .nav-link:hover {
+    border: none;
+}
+.project-tab thead{
+    background: #f3f3f3;
+    color: #333;
+}
+.project-tab a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: #f2f2f2;
+}
+
+*[role="form"] h2 {
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #f15d30;
+    margin-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+*[role="form"] label{
+color: #f15d30;
+}
+
+
+</style>
+{% endblock%}
+{% block body %}
+ <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url({{package.image.url}});">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+      <div class="col-md-9 ftco-animate pb-5 text-center">
+       <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span class="mr-2"><a href="/tour_packages">Package <i class="fa fa-chevron-right"></i></a></span> <span>Package Detail <i class="fa fa-chevron-right"></i></span></p>
+       <h1 class="mb-0 bread">{{package.title}} Details</h1>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-4 sidebar ftco-animate bg-light py-md-5">
+
+        <div class="sidebar-box ftco-animate">
+          <div class="categories">
+            <h3>{{package.title}}</h3>
+            <h6>{{package.Tour_ID}}</h6>
+
+
+            <li><a >Cost per Person  <span style="color:#f15d30;">{{package.cost_per_person}} ₹</span></a></li>
+            <li><a >Capacity <span style="color:#f15d30;">{{package.max_capacity}} People</span></a></li>
+            <li><a>Days <span style="color:#f15d30;">{{package.no_of_days}} days</span></a></li>
+            <li><a>Departure <span style="color:#f15d30;">
+                 {% for dep in package.departure%}
+
+                                                    {{dep}},
+
+                                                {% endfor %}
+            </span></a></li>
+
+          </div>
+        </div>
+
+        <div class="sidebar-box ftco-animate">
+          <h3>Places of Tour</h3>
+            {% for place in package.get_tour_places %}
+
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url({{place.place_image.url}});"></a>
+            <div class="text">
+              <h3 class="heading"><a href="#">{{place.place}}</a></h3>
+              <div class="meta">
+                <div><a href="#" style="font-size:1rem"><i class="fa fa-hotel"></i> {{place.hotel}}</a></div>
+              </div>
+            </div>
+
+          </div>
+          {% endfor %}
+        </div>
+
+
+
+        </div>
+          <div class="col-lg-8 ftco-animate py-md-5 mt-md-5">
+            {% include 'messages.html' %}
+
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-ite" role="tab" aria-controls="nav-home" aria-selected="true">Tour Itinerary</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-inquiry" role="tab" aria-controls="nav-profile" aria-selected="false">Send Inquiry</a>
+
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-ite" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Day</th>
+                                            <th width="40%">Title</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for ite in itineraries%}
+                                        <tr>
+                                            <td><a href="#">{{ite.day_no}}</a></td>
+                                            <td width="40%">{{ite.title}}</td>
+                                            <td>{{ite.details | safe}}</td>
+                                        </tr>
+                                      {% endfor%}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-inquiry" role="tabpanel" aria-labelledby="nav-contact-tab">
+              <form class="form-horizontal mt-2" onsubmit="return validate_form()" method="post" action="/submit_inquiry/">{% csrf_token %}
+
+                <div class="form-group ">
+                    <label for="curr_date" class="col-sm-4 control-label">Date {{today_date}}</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="curr_date" name="curr_date" value='{{today_date |date}}' placeholder="Date" class="form-control" autofocus disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tour" class="col-sm-3 control-label">Tour Name</label>
+                    <div class="col-sm-9">
+                        <input type="hidden" id="tour_id" name="tour_id" value="{{package.pk}}">
+                        <input type="text" id="tour" name="tour_name" placeholder="Tour Name" value="{{package.title}}" class="form-control" autofocus disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Intrastate_date" class="col-sm-4 control-label">Intrastate Date*</label>
+                    <div class="col-sm-9">
+                        <input type="date" name="Intrastate_date" id="Intrastate_date" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email* </label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" placeholder="Email" class="form-control" name= "email" required>
+                    </div>
+                </div>
+                   <div class="form-group">
+                    <label for="FullName" class="col-sm-3 control-label">Full Name* </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="FullName"  placeholder="Full Name" class="form-control" name= "name" required>
+                    </div>
+                </div>
+
+                  <div class="form-group">
+                    <label for="no_of_person" class="col-sm-3 control-label">No of People* </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="no_of_person" placeholder="No of People" class="form-control" name= "no_of_person" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-4 control-label">Phone number * </label>
+                    <div class="col-sm-9">
+                        <input type="phoneNumber" name="phone" id="phoneNumber" placeholder="Phone number" class="form-control" required>
+
+                    </div>
+                </div>
+                 <div class="form-group">
+                        <label for="address" class="col-sm-3 control-label">Address* </label>
+                    <div class="col-sm-9">
+                        <textarea id="address" name="address" placeholder="Your address" class="form-control" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="city" class="col-sm-3 control-label">City* </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="city" name="city" placeholder="Your City" class="form-control" required>
+                    </div>
+                </div>
+                 <div class="form-group">
+                        <label for="state" class="col-sm-3 control-label">State* </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="state" name="state" placeholder="Your State" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="country" class="col-sm-3 control-label">Country* </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="country" name="country" placeholder="Your Country" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <span class="help-block">*Required fields</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Send Inquiry</button>
+            </form> <!-- /form -->
+                            </div>
+                        </div>
+
+      </div>
+
+
+      </div> <!-- .col-md-8 -->
+
+      </div>
+
+
+
+</section> <!-- .section -->
+
+<section class="ftco-intro ftco-section ftco-no-pt">
+ <div class="container">
+  <div class="row justify-content-center">
+   <div class="col-md-12 text-center">
+    <div class="img"  style="background-image: url({% static 'images/bg_2.jpg' %});">
+     <div class="overlay"></div>
+     <h2>We Are Pacific A Travel Agency</h2>
+     <p>We can manage your dream building A small river named Duden flows by their place</p>
+     <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+   </div>
+ </div>
+</div>
+</div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script>
+  
+function validate_form(){
+var phoneno = /^[7-9]\d{9}$/;
+  phone = $("#phoneNumber").val()
+  if(!phone.match(phoneno)) {
+  alert("Please Enter Valid Phone Number")
+    return false;
+  }
+  return true;
+}
+</script>
+{% endblock %}

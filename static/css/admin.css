@@ -1,0 +1,109 @@
+#header{
+  background-color: #fff !important;
+  color: #f15d30 !important;
+  box-shadow: 0px 0px 3px 0px #f15d30;
+}
+
+#header a:link, #header a:visited{
+  color: #000 !important;
+}
+
+div.breadcrumbs{
+  background-color: #1c1f1f;
+}
+
+.navbar-brand{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+
+}
+.colMS h1{
+  font-weight: bold !important;
+}
+.navbar-brand span{
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  color: #f15d30;
+  display: block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.module h2, .module caption, .inline-group h2{
+  background-color: #1c1f1f;
+}
+.content{
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("/static/images/bg_5.jpg");
+
+}
+.login {
+  background-image:url("/static/images/bg_3.jpg") !important;
+}
+.login .form-row label{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.login .submit-row input[type=submit]{
+  background: #f15d30 !important;
+  color: #fff !important;
+  border : 1px solid #f15d30;
+
+}
+
+.login .content{
+  background-color: #000 !important;
+}
+th a,td a{
+  color: #fff !important;
+}
+.colM a{
+  color: #fff !important;
+}
+#result_list tbody th a{
+  color: #f15d30 !important;
+}
+#result_list td a{
+  color: #f15d30 !important;
+}
+.actionlist li a{
+    color :ghostwhite;
+}
+#changelist .actions .button{
+    background-color:#4169E1 !important;
+    color : #fff;
+}
+.form-row input,textarea,select{
+    background-color:#F0F8FF !important;
+    color : #000 !important;
+}
+.button, input[type=submit], input[type=button], .submit-row input, a.button{
+  background-color: #4169E1;
+}
+
+.button:active, input[type=submit]:active, input[type=button]:active, .button:focus, input[type=submit]:focus, input[type=button]:focus, .button:hover, input[type=submit]:hover, input[type=button]:hover{
+  background-color: #4169E1;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default{
+  background-color: #0073CF;
+}
+
+.button.default:active, input[type=submit].default:active, .button.default:focus, input[type=submit].default:focus, .button.default:hover, input[type=submit].default:hover{
+  background-color: #00BFFF;
+}
+
+a:link, a:visited{
+  color: #1c1f1f;
+}
+
+a.section:link, a.section:visited {
+  color: #f15d30;
+  text-decoration: none;
+}
+.django-ckeditor-widget{
+  width: 600px !important;
+}
+.cke_chrome{
+    width:600px !important;
+}
