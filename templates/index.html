@@ -113,7 +113,7 @@
 												<div class="form-group p-4">
 													<label for="price">Price Limit in ₹</label>
 													<div class="slidecontainer">
-													  <input type="range" min="0" max="150000" value="0" class="slider" name="price" id="price">
+													  <input type="range" min="0" max="150000" value="0" class="slider" name="price" id="priceRange">
 														<span id="demo" style="color:red"></span>
 													</div>
 												</div>
@@ -551,7 +551,7 @@
 {% endblock %}
 {% block script %}
 <script>
-var slider = document.getElementById("myRange");
+var slider = document.getElementById("priceRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value; // Display the default slider value
 
