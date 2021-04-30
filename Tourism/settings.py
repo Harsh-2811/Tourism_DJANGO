@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('TOUR_SECERET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pacific-tourism.herokuapp','localhost','127.0.0.0']
+ALLOWED_HOSTS = ['pacific-tourism.herokuapp.com','localhost','127.0.0.0']
 
 
 # Application definition
