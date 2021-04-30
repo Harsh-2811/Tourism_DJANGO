@@ -9,9 +9,13 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+import _locale
+_locale._getdefaultlocale = (lambda *args: ['en_US', 'utf8'])
 
 from pathlib import Path
 import os
+
+import dj_database_url
 from django.contrib.messages import constants as message
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,7 +45,8 @@ INSTALLED_APPS = [
     'Tour_app',
     'ckeditor',
     'blogs',
-    'users'
+    'users',
+    'django_social_share',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Tourism.urls'
@@ -67,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -77,7 +84,7 @@ WSGI_APPLICATION = 'Tourism.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+"""
 DATABASES = {
 'default': {
 
@@ -94,6 +101,10 @@ DATABASES = {
 
 
     }
+}
+"""
+DATABASES = {
+'default': dj_database_url.config(default='postgres://{}:{}@localhost/{}'.format(os.environ.get('Tourism_DATABASE_USERNAME'),os.environ.get('Tourism_DATABASE_PASSWORD'),'Tour'))
 }
 
 AUTH_USER_MODEL = 'users.CustomUser'

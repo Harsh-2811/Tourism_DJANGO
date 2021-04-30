@@ -1,5 +1,5 @@
 import datetime
-
+import django
 from ckeditor.fields import RichTextField
 from django.db import models
 
@@ -15,7 +15,7 @@ class Blog(models.Model):
     author = models.CharField(max_length=100)
     image= models.ImageField(upload_to='blogs',default="static/images/image_1.jpg")
     status = models.CharField(choices=status_type,max_length=20)
-    date = models.DateField(default=datetime.datetime.now().date())
+    date = models.DateField(default=django.utils.timezone.now)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     category = models.CharField(max_length=100,default="Travel",null=True,blank=True)

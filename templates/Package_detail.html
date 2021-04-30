@@ -1,6 +1,7 @@
 {% extends 'basic.html' %}
 {% load static %}
 {% block style %}
+{% load social_share %}
 <style>
     .project-tab {
     padding: 10%;
@@ -100,6 +101,11 @@ color: #f15d30;
 
                                                 {% endfor %}
             </span></a></li>
+
+              <li><span style="float:left;padding-right:15px ">{% post_to_whatsapp "" "<button class='btn btn-success'>Share on <i class='fa fa-whatsapp fa-1x'  aria-hidden='true'></i></button>"%}</span>
+              <span>{% post_to_facebook  'http://127.0.0.1:8000/tour_package/{{package.pk}}' "<button class='btn btn-info' style='background-color:blue'>Share on <i class='fa fa-facebook-square fa-1x'  aria-hidden='true'></i></button>"  %}</span>
+
+              </li>
 
           </div>
         </div>
