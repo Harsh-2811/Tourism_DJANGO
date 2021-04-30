@@ -1,11 +1,11 @@
 from django.contrib import admin
 from django.shortcuts import render
 from django.utils.html import format_html
-
+from import_export.admin import ImportExportModelAdmin
 from .models import *
 
 
-class CountryAdmin(admin.ModelAdmin):
+class CountryAdmin(ImportExportModelAdmin):
     def thumbnail(self,object):
         return format_html('<img src="{}" width="80" style="border-radius:50px">'.format(object.image.url))
 
@@ -27,7 +27,7 @@ class PlaceModelAdmin(admin.ModelAdmin):
     list_display_links   = ('id','package','title',)
 
 admin.site.register(Tour_Itinerary,PlaceModelAdmin)
-class PackageAdmin(admin.ModelAdmin):
+class PackageAdmin(ImportExportModelAdmin):
     inlines = [PlaceAdmin,Tour_ItineraryAdmin ]
 
     def thumbnail(self,object):
@@ -46,7 +46,7 @@ class PackageAdmin(admin.ModelAdmin):
 
 admin.site.register(Tour_package,PackageAdmin)
 
-class Place_hotel_Admin(admin.ModelAdmin):
+class Place_hotel_Admin(ImportExportModelAdmin):
     def thumbnail(self,object):
         return format_html('<img src="{}" width="80" height="50px" style="border-radius:50px">'.format(object.place_image.url))
     list_display = ['id','hotel','place','package','thumbnail']
@@ -54,14 +54,14 @@ class Place_hotel_Admin(admin.ModelAdmin):
 
 admin.site.register(Tour_place_hotel,Place_hotel_Admin)
 
-class HotelAdmin(admin.ModelAdmin):
+class HotelAdmin(ImportExportModelAdmin):
     def thumbnail(self,object):
         return format_html('<img src="{}" width="30"  style="border-radius:50px">'.format(object.image.url))
     list_display = ['id', 'name', 'location', 'country','total_rooms','thumbnail']
     list_display_links = ['id','name']
 admin.site.register(Hotel,HotelAdmin)
 
-class RoomAdmin(admin.ModelAdmin):
+class RoomAdmin(ImportExportModelAdmin):
     def thumbnail(self,object):
         return format_html('<img src="{}" width="30" style="border-radius:50px">'.format(object.image.url))
     list_display = ['id', 'type', 'hotel', 'price','bed_details','capacity','thumbnail']

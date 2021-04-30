@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('TOUR_SECERET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pacific-tourism.herokuapp.com','localhost','127.0.0.0']
+ALLOWED_HOSTS = ['pacific-tourism.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'blogs',
     'users',
     'django_social_share',
+    'import_export'
 ]
 
 MIDDLEWARE = [
