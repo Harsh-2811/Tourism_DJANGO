@@ -1,0 +1,1765 @@
+[
+{
+    "model": "sessions.session",
+    "pk": "cot1lwocs1qyute9waxdekza68npl9p8",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSGU4enSvd9AGAakaiAp7cr479qkC93ec859sRC3tYZt5CXMxM5sYqffDWN65LYDusd26zz1ti4z8l3hBx382ik_L4f7d1DjqN_aIBAmIScllDcSrCZPyoEAn0SyUTrUpWgdoSiZLRgAJVD6XGQxmB17fwDBODdB:1lbk2O:j1Z9gYingmZi51XDOlqe0P2Y3TzIe5VpzF3Z-EZfxwE",
+        "expire_date": "2021-05-12T13:15:32.191Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "njj9635i71r49mwz0fpol9jqtvjpsw82",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQRO_iGln2bvCHkj5nsNY_HEC2FCcV4u5gKQWUM-_NvJijfStu72l1S2QXJtnpt_MUHqkOEO9Ub42HVrd18Xwo_KCdzy2m5_Vw_w4K9fJdaxWioHNGzJpgMslmpcGMIMkbzBkBhEKw0gpDekIRrVBA1vtA2rP3B9UkN3E:1laGJE:D9Oa_LpX9P8MRjrDSPtJEYtyNUWL2Ri0GK0yQFeKB5U",
+        "expire_date": "2021-05-08T11:18:48.416Z"
+    }
+},
+{
+    "model": "Tour_app.countries",
+    "pk": 1,
+    "fields": {
+        "name": "India",
+        "image": "images/IndiaTour.jpg",
+        "description": "Tourism in India is important for the country's economy and is growing rapidly. The World Travel and Tourism Council calculated that tourism generated ₹16.91 lakh crore (US$240 billion) or 9.2% of India's GDP in 2018 and supported 42.673 million jobs, 8.1% of its total employment.[1] The sector is predicted to grow at an annual rate of 6.9% to ₹32.05 lakh crore (US$450 billion) by 2028 (9.9% of GDP).[2] In October 2015, India's medical tourism sector was estimated to be worth US$3 billion, and it is projected to grow to US$7–8 billion by 2020.[3] In 2014, 184,298 foreign patients travelled to India to seek medical treatment.[4]"
+    }
+},
+{
+    "model": "Tour_app.countries",
+    "pk": 2,
+    "fields": {
+        "name": "USA",
+        "image": "images/USA_a96FhOq.jpg",
+        "description": "Tourism in the United States is a large industry that serves millions of international and domestic tourists yearly. Foreigners visit the U.S. to see natural wonders, cities, historic landmarks, and entertainment venues. Americans seek similar attractions, as well as recreation and vacation areas.\r\n\r\nTourism in the United States grew rapidly in the form of urban tourism during the late nineteenth and early twentieth centuries. By the 1850s, tourism in the United States was well established both as a cultural activity and as an industry. New York City, Los Angeles, Chicago, Boston, Philadelphia, Washington, D.C.,"
+    }
+},
+{
+    "model": "Tour_app.countries",
+    "pk": 3,
+    "fields": {
+        "name": "Canada",
+        "image": "images/place-2_Fa4H0FX.jpg",
+        "description": "The second largest country in the world, Canada has no shortage of beautiful landscapes and unique sites for travelers to explore. From coast to coast to coast, the country is home to vibrant and culturally rich cities, along with incredible natural wonders."
+    }
+},
+{
+    "model": "Tour_app.countries",
+    "pk": 4,
+    "fields": {
+        "name": "Thailand",
+        "image": "images/Thailand_NBgfGHb.jpg",
+        "description": "Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach resorts include bustling Pattaya and fashionable Hua Hin"
+    }
+},
+{
+    "model": "Tour_app.countries",
+    "pk": 5,
+    "fields": {
+        "name": "Malaysia",
+        "image": "images/Malaysia_MIJuILq.jpg",
+        "description": "Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach resorts include bustling Pattaya and fashionable Hua Hin"
+    }
+},
+{
+    "model": "Tour_app.tour_package",
+    "pk": 2,
+    "fields": {
+        "Tour_ID": "HM_1000_HM",
+        "title": "Himachal Mini Tour",
+        "no_of_days": 5,
+        "image": "images/destination-5_AZ2z6ww.jpg",
+        "Nearest_nature_place": "Mountain",
+        "details": "A 5 Day Tour with the best places included in Himachal. Buses are used as travelling vehicle. \r\nBreakfast, lunch and Dinner will be cooked by our special cook.",
+        "destination": "Himachal",
+        "country": "India",
+        "cost_per_person": "15000",
+        "departure": "Jan,Fab,Mar,April",
+        "is_available": true,
+        "is_full": false,
+        "max_capacity": 500
+    }
+},
+{
+    "model": "Tour_app.tour_package",
+    "pk": 3,
+    "fields": {
+        "Tour_ID": "KL_106_KL",
+        "title": "Kerala Tour",
+        "no_of_days": 7,
+        "image": "images/kerala.jpg",
+        "Nearest_nature_place": "Mountain",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.",
+        "destination": "Kerala",
+        "country": "india",
+        "cost_per_person": "12000",
+        "departure": "July,Aug,Sept",
+        "is_available": true,
+        "is_full": false,
+        "max_capacity": 300
+    }
+},
+{
+    "model": "Tour_app.tour_package",
+    "pk": 4,
+    "fields": {
+        "Tour_ID": "GJ_105_GJ",
+        "title": "Gujarat Tour",
+        "no_of_days": 4,
+        "image": "images/Gujarat.jpg",
+        "Nearest_nature_place": "Mountain",
+        "details": "Gujarat is a state on the western coast of India with a coastline of 1,600 km – most of which lies on the Kathiawar peninsula – and a population of 60.4 million. It is the fifth-largest Indian state by area and the ninth-largest state by population.",
+        "destination": "Gujarat",
+        "country": "India",
+        "cost_per_person": "10000",
+        "departure": "Jan,Fab,Mar",
+        "is_available": true,
+        "is_full": false,
+        "max_capacity": 200
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 1,
+    "fields": {
+        "package": 2,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 1,
+        "details": "<h1><span class=\"marker\"><strong>Day 1 :</strong></span>&nbsp;</h1>\r\n\r\n<p>Warm Greetings to your Pacific tour. Arrive at Bagdogra airport (by 14:00 noon) /New Jalpaiguri station (by 10:00 am) meet our representative &amp; proceed to Siliguri have your lunch &amp; then proceed to Darjeeling. (Guest will have to wait for co-passengers at airport / Siligudi hotel subject to group size) Dinner &amp; night halt at Darjeeling.</p>\r\n\r\n<p><span style=\"color:#2ecc71\"><strong>-&gt; Breakfast&nbsp; -&gt;&nbsp;</strong></span><span style=\"color:#2ecc71\"><strong>Lunch&nbsp; -&gt;&nbsp;</strong></span><span style=\"color:#2ecc71\"><strong>Dinner</strong></span></p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 2,
+    "fields": {
+        "package": 2,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 2,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non sem suscipit, elementum nibh vitae, rhoncus tortor. Suspendisse vitae diam nec velit tristique condimentum et sit amet leo.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 3,
+    "fields": {
+        "package": 2,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 3,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non sem suscipit, elementum nibh vitae, rhoncus tortor. Suspendisse vitae diam nec velit tristique condimentum et sit amet leo.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 4,
+    "fields": {
+        "package": 2,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 4,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non sem suscipit, elementum nibh vitae, rhoncus tortor. Suspendisse vitae diam nec velit tristique condimentum et sit amet leo.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 5,
+    "fields": {
+        "package": 2,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 5,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non sem suscipit, elementum nibh vitae, rhoncus tortor. Suspendisse vitae diam nec velit tristique condimentum et sit amet leo.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 6,
+    "fields": {
+        "package": 3,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 1,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 7,
+    "fields": {
+        "package": 3,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 2,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 8,
+    "fields": {
+        "package": 3,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 3,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 9,
+    "fields": {
+        "package": 3,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 4,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 10,
+    "fields": {
+        "package": 3,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 5,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 11,
+    "fields": {
+        "package": 3,
+        "title": "Lorem ipsum dolor s",
+        "day_no": 6,
+        "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 12,
+    "fields": {
+        "package": 4,
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "day_no": 1,
+        "details": "<p>The Statue of Unity is a colossal statue of Indian statesman and independence activist Vallabhbhai Patel, who was the first Deputy Prime Minister and Home Minister of independent India and an adherent of Mahatma Gandhi during the nonviolent Indian Independence movement.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 13,
+    "fields": {
+        "package": 4,
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "day_no": 2,
+        "details": "<p>The Somnath temple located in Veraval in Saurashtra on the western coast of Gujarat, India is believed to be the first among the twelve Jyotirlinga shrines of Shiva. It is an important pilgrimage and tourist spot of Gujarat.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 14,
+    "fields": {
+        "package": 4,
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "day_no": 3,
+        "details": "<p>Dwarka is an ancient city in the northwestern Indian state of Gujarat. It&rsquo;s known as a Hindu pilgrimage site. The ancient Dwarkadhish Temple has an elaborately tiered main shrine, a carved entrance and a black-marble idol of Lord Krishna.</p>"
+    }
+},
+{
+    "model": "Tour_app.tour_itinerary",
+    "pk": 15,
+    "fields": {
+        "package": 4,
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "day_no": 4,
+        "details": "<p>Being one of the youth brands of Global Tourism India (GTI TRAVELS PRIVATE LIMITED), we know your needs the best and thus offer you the best of your time and money for Gir National Park Tour. Under the guidance of our expert guides you will have surely a life time experience or everyone looking to fulfill their wildlife fantasies across one of most renowned wildlife sanctuary of India, we offer Gir Wild Life Tour Package.</p>"
+    }
+},
+{
+    "model": "Tour_app.hotel",
+    "pk": 1,
+    "fields": {
+        "name": "Sardar Patel Hotel",
+        "location": "Kevdiya,Gujarat",
+        "country": "india",
+        "image": "image/hotel-resto-1.jpg",
+        "rating": 1,
+        "no_of_rating": 10
+    }
+},
+{
+    "model": "Tour_app.hotel",
+    "pk": 2,
+    "fields": {
+        "name": "Hotel Shivalok",
+        "location": "Somnath",
+        "country": "India",
+        "image": "image/hotel-resto-4.jpg",
+        "rating": 1,
+        "no_of_rating": 10
+    }
+},
+{
+    "model": "Tour_app.hotel",
+    "pk": 3,
+    "fields": {
+        "name": "Pacific Hotel",
+        "location": "Kodaikenal",
+        "country": "India",
+        "image": "image/hotel-resto-2.jpg",
+        "rating": 1,
+        "no_of_rating": 10
+    }
+},
+{
+    "model": "Tour_app.hotel",
+    "pk": 4,
+    "fields": {
+        "name": "ATOZ Hotel",
+        "location": "Uti",
+        "country": "India",
+        "image": "image/hotel-resto-1_Da9Qu0H.jpg",
+        "rating": 1,
+        "no_of_rating": 10
+    }
+},
+{
+    "model": "Tour_app.hotel",
+    "pk": 5,
+    "fields": {
+        "name": "Munnar Special Hotel",
+        "location": "Munnar",
+        "country": "India",
+        "image": "image/hotel-resto-3.jpg",
+        "rating": 1,
+        "no_of_rating": 10
+    }
+},
+{
+    "model": "Tour_app.hotel",
+    "pk": 6,
+    "fields": {
+        "name": "Himachal Best Hotel",
+        "location": "Shimla",
+        "country": "India",
+        "image": "image/Hotel.jfif",
+        "rating": 1,
+        "no_of_rating": 10
+    }
+},
+{
+    "model": "Tour_app.hotel",
+    "pk": 7,
+    "fields": {
+        "name": "Delhoisy Wooden Hotel",
+        "location": "Delhousy",
+        "country": "India",
+        "image": "image/hotel-resto-1_cGnMdNq.jpg",
+        "rating": 1,
+        "no_of_rating": 10
+    }
+},
+{
+    "model": "Tour_app.hotel",
+    "pk": 8,
+    "fields": {
+        "name": "Manali Best",
+        "location": "Manal",
+        "country": "India",
+        "image": "image/hotel-resto-6.jpg",
+        "rating": 1,
+        "no_of_rating": 10
+    }
+},
+{
+    "model": "Tour_app.tour_place_hotel",
+    "pk": 1,
+    "fields": {
+        "package": 4,
+        "hotel": 1,
+        "place": "Kevadiya Colony",
+        "place_image": "image/Gujarat_nNrHNKC.jpg"
+    }
+},
+{
+    "model": "Tour_app.tour_place_hotel",
+    "pk": 2,
+    "fields": {
+        "package": 4,
+        "hotel": 2,
+        "place": "Somnath",
+        "place_image": "image/Gujarat_qvhpl3T.jpg"
+    }
+},
+{
+    "model": "Tour_app.tour_place_hotel",
+    "pk": 3,
+    "fields": {
+        "package": 4,
+        "hotel": 1,
+        "place": "Gir Jungle",
+        "place_image": "image/git.jpg"
+    }
+},
+{
+    "model": "Tour_app.tour_place_hotel",
+    "pk": 4,
+    "fields": {
+        "package": 3,
+        "hotel": 3,
+        "place": "Kodaikenal",
+        "place_image": "image/destination-12_4CpAasc.jpg"
+    }
+},
+{
+    "model": "Tour_app.tour_place_hotel",
+    "pk": 5,
+    "fields": {
+        "package": 3,
+        "hotel": 4,
+        "place": "Uti",
+        "place_image": "image/place-4.jpg"
+    }
+},
+{
+    "model": "Tour_app.tour_place_hotel",
+    "pk": 6,
+    "fields": {
+        "package": 3,
+        "hotel": 5,
+        "place": "Munnar",
+        "place_image": "image/destination-11_83iNRj5.jpg"
+    }
+},
+{
+    "model": "Tour_app.tour_place_hotel",
+    "pk": 7,
+    "fields": {
+        "package": 2,
+        "hotel": 6,
+        "place": "Shimla",
+        "place_image": "image/destination-11.jpg"
+    }
+},
+{
+    "model": "Tour_app.tour_place_hotel",
+    "pk": 8,
+    "fields": {
+        "package": 2,
+        "hotel": 7,
+        "place": "Delhousy",
+        "place_image": "image/destination-4.jpg"
+    }
+},
+{
+    "model": "Tour_app.tour_place_hotel",
+    "pk": 9,
+    "fields": {
+        "package": 2,
+        "hotel": 8,
+        "place": "Manali",
+        "place_image": "image/destination-12.jpg"
+    }
+},
+{
+    "model": "Tour_app.contactu",
+    "pk": 1,
+    "fields": {
+        "name": "Harsh R Patel",
+        "email": "harshpatel281199@gmail.com",
+        "subject": "Test",
+        "message": "Test"
+    }
+},
+{
+    "model": "Tour_app.tour_inquiry",
+    "pk": 1,
+    "fields": {
+        "date": "2021-04-30",
+        "interested_date": "2021-04-27",
+        "package": 4,
+        "name": "Harsh R Patel",
+        "people": 5,
+        "email": "hrpatel8935@gmail.com",
+        "phone": "8849430206",
+        "city": "Surat",
+        "state": "GUJARAT",
+        "country": "India",
+        "address": "Adsdssad"
+    }
+},
+{
+    "model": "Tour_app.tour_inquiry",
+    "pk": 2,
+    "fields": {
+        "date": "2021-04-30",
+        "interested_date": "2021-05-01",
+        "package": 4,
+        "name": "Harsh R Patel",
+        "people": 5,
+        "email": "hrpatel8935@gmail.com",
+        "phone": "8849430206",
+        "city": "Surat",
+        "state": "GUJARAT",
+        "country": "India",
+        "address": "Adsdssad"
+    }
+},
+{
+    "model": "Tour_app.tour_inquiry",
+    "pk": 3,
+    "fields": {
+        "date": "2021-04-28",
+        "interested_date": "2021-07-02",
+        "package": 3,
+        "name": "Harsh R Patel",
+        "people": 5,
+        "email": "harshpatel281199@gmail.com",
+        "phone": "8849430206",
+        "city": "Surat",
+        "state": "Gujarat",
+        "country": "India",
+        "address": "B-502 Sunday Avenue ,near Ankur school amabatalavadi Katargam Surat"
+    }
+},
+{
+    "model": "blogs.blog",
+    "pk": 1,
+    "fields": {
+        "title": "Jaipur, Rajasthan",
+        "slug": "Jaipur",
+        "content": "<p>Rajasthan is magnificent, Rajasthan is captivating, and its capital&nbsp;<a href=\"https://www.tourism-of-india.com/jaipur/\">Jaipur</a>&nbsp;provides a hot air ballooning experience over the picturesque Aravalis, magnificent forts. Around 50 (approx.) International travelers indulge in hot air balloon safari in Jaipur every day, which shows it is worth all the hype. You get to enjoy the 360-degree views of the capital of Rajasthan, which is the royal experience to cherish in the &lsquo;Land of Maharajas.&rsquo; If you are on your honeymoon, then it would be very romantic to propose to your beloved one at an altitude of 1200 ft (approx.) amidst the golden hues of sunset. Return home with everlasting memories of Rajasthan, whether with family or your sweetheart.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Is Jaipur Worth The Hype:</strong>&nbsp;Yes! Catching a birds-eye view of the Pink City on a hot air balloon is one of the best things to do in Jaipur.</p>\r\n\r\n<p><strong>For How Long Ride will Last:&nbsp;</strong>45 to 60 minutes (approx.)</p>\r\n\r\n<p><strong>Best Time for Activity:&nbsp;</strong>March to October</p>\r\n\r\n<p><strong>Average Height:&nbsp;</strong>1200 ft &ndash; 5000 ft (approx.)</p>",
+        "author": "Admin",
+        "image": "blogs/jaipur.jpeg",
+        "status": "1",
+        "date": "2021-04-01",
+        "created_at": "2021-04-26T05:51:17.272Z",
+        "updated_at": "2021-04-26T06:27:01.078Z",
+        "category": "Travel"
+    }
+},
+{
+    "model": "blogs.blog",
+    "pk": 2,
+    "fields": {
+        "title": "Goa",
+        "slug": "Goa",
+        "content": "<p>Experiencing a magical hot air balloon ride over the sea in&nbsp;<a href=\"https://www.tourism-of-india.com/goa/\">Goa</a>&nbsp;is one of the best things to do in summer and winters. You will love enjoying the panoramic views of the Arabian Sea while perching yourself in a cozy hot air colorful balloon. You will get a chance to cruise in the sky with your friends or family or sweetheart in a spacious luxury basket. Before the activity, satiate your hunger with light onsite refreshments included in the hot air ballooning package. Get your camera ready for perfect sea cliff shots. Inside the hot air balloon basket, up to 10 people can accommodate in one single ride. Note that the cost of a private hot air balloon ride cost is whooping! Take your kids or parents on a hot air balloon ride in Goa beyond beaches.</p>",
+        "author": "Admin",
+        "image": "blogs/goa.jpg",
+        "status": "1",
+        "date": "2021-02-11",
+        "created_at": "2021-04-26T05:52:27.135Z",
+        "updated_at": "2021-04-26T06:26:52.890Z",
+        "category": "Travel"
+    }
+},
+{
+    "model": "blogs.blog",
+    "pk": 3,
+    "fields": {
+        "title": "White Water Rafting",
+        "slug": "Rafting",
+        "content": "<p>River rafting is among the&nbsp;<strong>best adventure sports in Uttarakhand</strong>. Perhaps it is one of the most sought-after adventure water sports done by almost every adventure freak during a trip to Uttarakhand. The gushing rapids of the river Ganges and Tons taking you in its own direction, throwing you up and down while you flip the paddles is one of the best experiences to embrace.</p>",
+        "author": "Admin",
+        "image": "blogs/Rafting.jpg",
+        "status": "1",
+        "date": "2021-02-10",
+        "created_at": "2021-04-26T05:54:01.976Z",
+        "updated_at": "2021-04-26T06:26:42.439Z",
+        "category": "Travel"
+    }
+},
+{
+    "model": "blogs.blog",
+    "pk": 4,
+    "fields": {
+        "title": "Trekking in The Himalayas",
+        "slug": "Trekking",
+        "content": "<p>The closeness of the mighty Himalayan ranges makes Uttarakhand one of the best places to indulge in extreme sports, and trekking is not the exception. The sky-kissing snow-capped peaks allow adventure enthusiasts to hit its best trekking trails, which is nothing less than a treat to the senses.</p>",
+        "author": "Admin",
+        "image": "blogs/Treeking-in-Uttarakhand.jpg",
+        "status": "1",
+        "date": "2021-04-24",
+        "created_at": "2021-04-26T05:56:30.764Z",
+        "updated_at": "2021-04-26T06:26:33.894Z",
+        "category": "Travel"
+    }
+},
+{
+    "model": "blogs.blog",
+    "pk": 5,
+    "fields": {
+        "title": "Tandem Paragliding in Mussoorie",
+        "slug": "Tandem Paragliding in Mussoorie",
+        "content": "<p>The best part of Tandem Paragliding in Mussoorie is that it does not require any prior experience or skill to enjoy it. Sit tight and simply hang on the ropes, and leave it on the pilot. Enjoy flying for around 15 to 20 minutes in the air and let the adrenaline take your nerves away. It is one of the&nbsp;<strong>best adventure sports to try in Uttarakhand</strong>.</p>",
+        "author": "Admin",
+        "image": "blogs/Tandem-Paragliding-in-Mussoorie.jpg",
+        "status": "1",
+        "date": "2021-01-28",
+        "created_at": "2021-04-26T05:57:25.149Z",
+        "updated_at": "2021-04-26T06:26:23.527Z",
+        "category": "Travel"
+    }
+},
+{
+    "model": "blogs.blog",
+    "pk": 6,
+    "fields": {
+        "title": "Munnar In Monsoon",
+        "slug": "Munnar In Monsoon",
+        "content": "<p>Nestled along the asymmetric slopes of the Nilgiri hills, this picturesque place is a must visit during the&nbsp;<strong>rainy season in Munnar</strong>. Situated at a distance of 3 km from Munnar this scenic place falls on the way to Top station and Mattupetti. Truly justifying its name, the lush green tea gardens and the scenic hills makes a great backdrop to capture.</p>\r\n\r\n<p><strong>Location:</strong>&nbsp;SH18, Kannan Devan Hills, Kerala 685612<br />\r\n<strong>Timings:</strong>&nbsp;10:00 AM &ndash; 8:00 PM</p>",
+        "author": "Admin",
+        "image": "blogs/Munnar.jpg",
+        "status": "1",
+        "date": "2021-04-09",
+        "created_at": "2021-04-26T06:13:17.882Z",
+        "updated_at": "2021-04-26T11:13:11.798Z",
+        "category": "Scenery"
+    }
+},
+{
+    "model": "blogs.blog",
+    "pk": 7,
+    "fields": {
+        "title": "Test",
+        "slug": "",
+        "content": "Test",
+        "author": "harshpatel281199@gmail.com",
+        "image": "git.jpg",
+        "status": "0",
+        "date": "2021-04-27",
+        "created_at": "2021-04-27T15:56:12.524Z",
+        "updated_at": "2021-04-27T15:56:12.524Z",
+        "category": "Travel"
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$260000$S3Xe7eVT3ib6DJ7nmTgeRb$qcCf0A/WxAmc1fIkUE+TAaAqZDyHwPf7zyQv3L7V960=",
+        "last_login": "2021-04-28T13:15:32.182Z",
+        "is_superuser": true,
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-04-27T13:23:28.567Z",
+        "email": "harshpatel281199@gmail.com",
+        "username": "Harsh8935",
+        "first_name": "",
+        "last_name": "",
+        "created_at": "2021-04-27T13:23:28.719Z",
+        "updated_at": "2021-04-27T13:23:28.719Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$260000$GKgUvlUsl0UYvza5oVXj7C$pRfQ9SCvK09jOYAgLz+sAkqv+xHR1POn2V9TKLaBhCg=",
+        "last_login": "2021-04-28T07:43:48.528Z",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-04-28T05:44:39.596Z",
+        "email": "hrpatel8935@gmail.com",
+        "username": "hrpatel8935@gmail.com",
+        "first_name": "Harsh",
+        "last_name": "Patel",
+        "created_at": "2021-04-28T05:44:39.786Z",
+        "updated_at": "2021-04-28T05:44:39.791Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2021-04-24T11:26:24.507Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "countries"
+        ],
+        "object_id": "1",
+        "object_repr": "India",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2021-04-24T11:27:07.872Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "countries"
+        ],
+        "object_id": "2",
+        "object_repr": "USA",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2021-04-24T11:27:42.591Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "countries"
+        ],
+        "object_id": "3",
+        "object_repr": "Canada",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2021-04-24T11:28:23.252Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "countries"
+        ],
+        "object_id": "4",
+        "object_repr": "Thailand",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2021-04-24T11:29:00.191Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "countries"
+        ],
+        "object_id": "5",
+        "object_repr": "Malaysia",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2021-04-24T12:14:02.488Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "2",
+        "object_repr": "Himachal Mini Tour",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Arriving at Shimla\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Visit market of Shimla and near places\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Travelling from shimla to manali\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2021-04-24T12:16:03.512Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "2",
+        "object_repr": "Himachal Mini Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dests\"]}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Visit Rohtang\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Dispatch for Khajiyar\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2021-04-24T13:12:11.445Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "3",
+        "object_repr": "Kerala Tour",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Arrival at Kerala and way to Dhanolti\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Visit beauty of Dhanolti\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"House Boat\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Way to Kodaikenal\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Way to Uti\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"way to Munnar\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2021-04-24T13:28:27.852Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "3",
+        "object_repr": "Kerala Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Country\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2021-04-24T14:29:29.379Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "4",
+        "object_repr": "Gujarat Tour",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Visit Statue of Unity\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Somanath Temple\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Dwarika\"}}, {\"added\": {\"name\": \"tour_ itinerary\", \"object\": \"Git Forest\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2021-04-25T03:43:24.519Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "4",
+        "object_repr": "Gujarat Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nearest nature place\", \"Max capacity\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>The Statue of Unity is a colossal statue of Indian statesman and independence activist Vallabhbhai Patel, who was the first Deputy Prime Minister and Home Minister of independent India and an adherent of Mahatma Gandhi during the nonviolent Indian Independence movement.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>The Somnath temple located in Veraval in Saurashtra on the western coast of Gujarat, India is believed to be the first among the twelve Jyotirlinga shrines of Shiva. It is an important pilgrimage and tourist spot of Gujarat.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Dwarka is an ancient city in the northwestern Indian state of Gujarat. It&rsquo;s known as a Hindu pilgrimage site. The ancient Dwarkadhish Temple has an elaborately tiered main shrine, a carved entrance and a black-marble idol of Lord Krishna.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Being one of the youth brands of Global Tourism India (GTI TRAVELS PRIVATE LIMITED), we know your needs the best and thus offer you the best of your time and money for Gir National Park Tour. Under the guidance of our expert guides you will have surely a life time experience or everyone looking to fulfill their wildlife fantasies across one of most renowned wildlife sanctuary of India, we offer Gir Wild Life Tour Package.</p>\", \"fields\": [\"Details\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2021-04-25T03:43:39.216Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "3",
+        "object_repr": "Kerala Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Max capacity\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sagittis massa at aliquam. Mauris erat odio, mollis at velit a, dictum sodales augue. Vivamus rutrum aliquam pulvinar. Mauris enim nisl, porta vel nulla viverra, venenatis elementum libero. Morbi venenatis arcu quis risus blandit tincidunt.</p>\", \"fields\": [\"Details\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2021-04-25T03:43:54.315Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "2",
+        "object_repr": "Himachal Mini Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Max capacity\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Warm Greetings to your Hinna tour. Arrive at Bagdogra airport (by 14:00 noon) /New Jalpaiguri station (by 10:00 am) meet our representative &amp; proceed to Siliguri have your lunch &amp; then proceed to Darjeeling. (Guest will have to wait for co-passengers at airport / Siligudi hotel subject to group size) Dinner &amp; night halt at Darjeeling.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non sem suscipit, elementum nibh vitae, rhoncus tortor. Suspendisse vitae diam nec velit tristique condimentum et sit amet leo.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non sem suscipit, elementum nibh vitae, rhoncus tortor. Suspendisse vitae diam nec velit tristique condimentum et sit amet leo.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non sem suscipit, elementum nibh vitae, rhoncus tortor. Suspendisse vitae diam nec velit tristique condimentum et sit amet leo.</p>\", \"fields\": [\"Details\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non sem suscipit, elementum nibh vitae, rhoncus tortor. Suspendisse vitae diam nec velit tristique condimentum et sit amet leo.</p>\", \"fields\": [\"Details\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2021-04-25T03:45:38.255Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "2",
+        "object_repr": "Himachal Mini Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"1\", \"fields\": [\"Details\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2021-04-25T04:06:37.642Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "2",
+        "object_repr": "Himachal Mini Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"1\", \"fields\": [\"Details\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2021-04-25T05:48:45.370Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "hotel"
+        ],
+        "object_id": "1",
+        "object_repr": "Sardar Patel Hotel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2021-04-25T05:48:54.599Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "1",
+        "object_repr": "Place is Kevadiya Colony and Hotel is Sardar Patel Hotel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2021-04-25T06:16:59.873Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "hotel"
+        ],
+        "object_id": "1",
+        "object_repr": "Sardar Patel Hotel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2021-04-25T06:22:06.635Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "hotel"
+        ],
+        "object_id": "2",
+        "object_repr": "Hotel Shivalok",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2021-04-25T06:22:32.829Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "4",
+        "object_repr": "Gujarat Tour",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"tour_place_hotel\", \"object\": \"Place is Somnath and Hotel is Hotel Shivalok\"}}, {\"added\": {\"name\": \"tour_place_hotel\", \"object\": \"Place is Gir Jungle and Hotel is Sardar Patel Hotel\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2021-04-25T06:29:55.260Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "hotel"
+        ],
+        "object_id": "3",
+        "object_repr": "Pacific Hotel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2021-04-25T06:31:27.346Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "hotel"
+        ],
+        "object_id": "4",
+        "object_repr": "ATOZ Hotel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2021-04-25T06:31:56.813Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "hotel"
+        ],
+        "object_id": "5",
+        "object_repr": "Munnar Special Hotel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2021-04-25T06:32:02.042Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "3",
+        "object_repr": "Kerala Tour",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"tour_place_hotel\", \"object\": \"Place is Kodaikenal and Hotel is Pacific Hotel\"}}, {\"added\": {\"name\": \"tour_place_hotel\", \"object\": \"Place is Uti and Hotel is ATOZ Hotel\"}}, {\"added\": {\"name\": \"tour_place_hotel\", \"object\": \"Place is Munnar and Hotel is Munnar Special Hotel\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2021-04-25T06:33:33.496Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "hotel"
+        ],
+        "object_id": "6",
+        "object_repr": "Himachal Best Hotel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2021-04-25T06:34:05.144Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "hotel"
+        ],
+        "object_id": "7",
+        "object_repr": "Delhoisy Wooden Hotel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2021-04-25T06:34:37.744Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "hotel"
+        ],
+        "object_id": "8",
+        "object_repr": "Manali Best",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2021-04-25T06:34:44.444Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "2",
+        "object_repr": "Himachal Mini Tour",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"tour_place_hotel\", \"object\": \"Place is Shimla and Hotel is Himachal Best Hotel\"}}, {\"added\": {\"name\": \"tour_place_hotel\", \"object\": \"Place is Delhousy and Hotel is Delhoisy Wooden Hotel\"}}, {\"added\": {\"name\": \"tour_place_hotel\", \"object\": \"Place is Manali and Hotel is Manali Best\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2021-04-25T07:29:36.558Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "9",
+        "object_repr": "Place is Manali and Hotel is Manali Best",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Place image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2021-04-25T07:30:41.618Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "8",
+        "object_repr": "Place is Delhousy and Hotel is Delhoisy Wooden Hotel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Place image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2021-04-25T07:30:52.548Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "7",
+        "object_repr": "Place is Shimla and Hotel is Himachal Best Hotel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Place image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2021-04-25T07:31:15.949Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "6",
+        "object_repr": "Place is Munnar and Hotel is Munnar Special Hotel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Place image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2021-04-25T07:31:31.080Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "5",
+        "object_repr": "Place is Uti and Hotel is ATOZ Hotel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Place image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2021-04-25T07:31:49.437Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "4",
+        "object_repr": "Place is Kodaikenal and Hotel is Pacific Hotel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Place image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2021-04-25T07:32:03.303Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "2",
+        "object_repr": "Place is Somnath and Hotel is Hotel Shivalok",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Place image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2021-04-25T07:32:22.618Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "1",
+        "object_repr": "Place is Kevadiya Colony and Hotel is Sardar Patel Hotel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Place image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2021-04-25T15:34:07.462Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "countries"
+        ],
+        "object_id": "1",
+        "object_repr": "India",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2021-04-26T03:12:45.867Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "4",
+        "object_repr": "Gujarat Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"13\", \"fields\": [\"Day no\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"14\", \"fields\": [\"Day no\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"15\", \"fields\": [\"Day no\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2021-04-26T03:13:18.854Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "3",
+        "object_repr": "Kerala Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"7\", \"fields\": [\"Day no\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"8\", \"fields\": [\"Day no\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"9\", \"fields\": [\"Day no\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"10\", \"fields\": [\"Day no\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"11\", \"fields\": [\"Day no\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2021-04-26T03:14:07.827Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "2",
+        "object_repr": "Himachal Mini Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"2\", \"fields\": [\"Day no\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"3\", \"fields\": [\"Day no\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"4\", \"fields\": [\"Day no\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"5\", \"fields\": [\"Day no\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2021-04-26T05:51:17.281Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "1",
+        "object_repr": "Jaipur, Rajasthan",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2021-04-26T05:52:27.140Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "2",
+        "object_repr": "Goa",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2021-04-26T05:54:01.979Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "3",
+        "object_repr": "White Water Rafting",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2021-04-26T05:56:30.766Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "4",
+        "object_repr": "Trekking in The Himalayas",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2021-04-26T05:57:25.154Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "5",
+        "object_repr": "Tandem Paragliding in Mussoorie",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2021-04-26T06:13:17.885Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "6",
+        "object_repr": "Munnar In Monsoon",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2021-04-26T06:26:14.455Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "6",
+        "object_repr": "Munnar In Monsoon",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2021-04-26T06:26:23.529Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "5",
+        "object_repr": "Tandem Paragliding in Mussoorie",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2021-04-26T06:26:33.896Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "4",
+        "object_repr": "Trekking in The Himalayas",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2021-04-26T06:26:42.444Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "3",
+        "object_repr": "White Water Rafting",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2021-04-26T06:26:52.893Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "2",
+        "object_repr": "Goa",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2021-04-26T06:27:01.080Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "1",
+        "object_repr": "Jaipur, Rajasthan",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2021-04-26T11:13:11.802Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "blogs",
+            "blog"
+        ],
+        "object_id": "6",
+        "object_repr": "Munnar In Monsoon",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2021-04-27T04:40:23.347Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_place_hotel"
+        ],
+        "object_id": "3",
+        "object_repr": "Place is Gir Jungle and Hotel is Sardar Patel Hotel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Place image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2021-04-27T05:15:12.391Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_itinerary"
+        ],
+        "object_id": "15",
+        "object_repr": "15",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2021-04-27T05:15:20.834Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_itinerary"
+        ],
+        "object_id": "14",
+        "object_repr": "14",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2021-04-27T05:15:27.890Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_itinerary"
+        ],
+        "object_id": "13",
+        "object_repr": "13",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2021-04-27T05:15:33.713Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_itinerary"
+        ],
+        "object_id": "12",
+        "object_repr": "12",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2021-04-28T13:16:34.930Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "4",
+        "object_repr": "Gujarat Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Tour ID\", \"Departure\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2021-04-28T13:20:33.660Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "3",
+        "object_repr": "Kerala Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Tour ID\", \"Departure\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"6\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"7\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"8\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"9\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"10\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"11\", \"fields\": [\"Title\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2021-04-28T13:21:09.018Z",
+        "user": [
+            "harshpatel281199@gmail.com"
+        ],
+        "content_type": [
+            "Tour_app",
+            "tour_package"
+        ],
+        "object_id": "2",
+        "object_repr": "Himachal Mini Tour",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Tour ID\", \"Departure\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"1\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"2\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"3\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"4\", \"fields\": [\"Title\"]}}, {\"changed\": {\"name\": \"tour_ itinerary\", \"object\": \"5\", \"fields\": [\"Title\"]}}]"
+    }
+}
+]
