@@ -23,6 +23,8 @@
 	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     {% block style %}
 
     {% endblock %}
@@ -52,7 +54,11 @@
                         {% else %}
                             class="nav-item"
                         {% endif %}><a href="/tour_packages" class="nav-link">Packages</a></li>
-					<li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
+					<li {% if '/hotels/' == request.path %}
+                                class="nav-item active"
+                        {% else %}
+                            class="nav-item"
+                        {% endif %}><a href="/hotels" class="nav-link">Hotel</a></li>
 					<li {% if '/blogs/' == request.path %}
                                 class="nav-item active"
                         {% else %}
@@ -183,7 +189,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="{% static 'js/google-map.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     {% block script %}
 
     {% endblock %}

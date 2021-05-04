@@ -57,14 +57,14 @@ admin.site.register(Tour_place_hotel,Place_hotel_Admin)
 class HotelAdmin(ImportExportModelAdmin):
     def thumbnail(self,object):
         return format_html('<img src="{}" width="30"  style="border-radius:50px">'.format(object.image.url))
-    list_display = ['id', 'name', 'location', 'country','total_rooms','thumbnail']
+    list_display = ['id', 'name', 'location', 'country','rooms_types','checkin_time','checkout_time','thumbnail']
     list_display_links = ['id','name']
 admin.site.register(Hotel,HotelAdmin)
 
 class RoomAdmin(ImportExportModelAdmin):
     def thumbnail(self,object):
         return format_html('<img src="{}" width="30" style="border-radius:50px">'.format(object.image.url))
-    list_display = ['id', 'type', 'hotel', 'price','bed_details','capacity','thumbnail']
+    list_display = ['id', 'type', 'hotel', 'price','bed_details','capacity','room_no','thumbnail']
     list_display_links = ['id','type']
 
 admin.site.register(Room,RoomAdmin)
@@ -84,4 +84,11 @@ class Inquiry_admin(admin.ModelAdmin):
     list_display_links = ['id','package']
 
 admin.site.register(Tour_Inquiry,Inquiry_admin)
+
+class BookingAdmin(admin.ModelAdmin):
+
+    list_display = ['id','room','hotel','person','check_in','check_out','amount_paid','no_of_rooms']
+    list_display_links = ['id','room','hotel']
+
+admin.site.register(Booking,BookingAdmin)
 

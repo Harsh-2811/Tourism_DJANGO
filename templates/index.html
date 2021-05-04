@@ -130,69 +130,58 @@
 								</div>
 
 								<div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
-									<form action="#" class="search-property-1">
-										<div class="row no-gutters">
-											<div class="col-lg d-flex">
-												<div class="form-group p-4 border-0">
-													<label for="#">Destination</label>
-													<div class="form-field">
-														<div class="icon"><span class="fa fa-search"></span></div>
-														<input type="text" class="form-control" placeholder="Search place">
-													</div>
-												</div>
-											</div>
-											<div class="col-lg d-flex">
-												<div class="form-group p-4">
-													<label for="#">Check-in date</label>
-													<div class="form-field">
-														<div class="icon"><span class="fa fa-calendar"></span></div>
-														<input type="text" class="form-control checkin_date" placeholder="Check In Date">
-													</div>
-												</div>
-											</div>
-											<div class="col-lg d-flex">
-												<div class="form-group p-4">
-													<label for="#">Check-out date</label>
-													<div class="form-field">
-														<div class="icon"><span class="fa fa-calendar"></span></div>
-														<input type="text" class="form-control checkout_date" placeholder="Check Out Date">
-													</div>
-												</div>
-											</div>
-											<div class="col-lg d-flex">
-												<div class="form-group p-4">
-													<label for="#">Price Limit</label>
-													<div class="form-field">
-														<div class="select-wrap">
-															<div class="icon"><span class="fa fa-chevron-down"></span></div>
-															<select name="" id="" class="form-control">
-																<option value="">$100</option>
-																<option value="">$10,000</option>
-																<option value="">$50,000</option>
-																<option value="">$100,000</option>
-																<option value="">$200,000</option>
-																<option value="">$300,000</option>
-																<option value="">$400,000</option>
-																<option value="">$500,000</option>
-																<option value="">$600,000</option>
-																<option value="">$700,000</option>
-																<option value="">$800,000</option>
-																<option value="">$900,000</option>
-																<option value="">$1,000,000</option>
-																<option value="">$2,000,000</option>
-															</select>
+									<form action="/hotels/" method="GET" class="search-property-1">
+													  <div class="row no-gutters">
+													   <div class="col-lg d-flex">
+														<div class="form-group p-4 border-0">
+														 <label for="#">Destination</label>
+														 <input type="hidden" value="True" name="apply_filter">
+														 <div class="form-field">
+														   <div class="icon"><span class="fa fa-search"></span></div>
+														   <input type="text" class="form-control" name="destination" placeholder="Search place">
+														 </div>
+													   </div>
+													 </div>
+													 <div class="col-lg d-flex">
+													  <div class="form-group p-4">
+													   <label for="#">Check-in date</label>
+													   <div class="form-field">
+
+														 <input type="text" class="form-control checkin_date" name="check_in_date" id="today_date" value='{{todays_date|date:"M/d/Y"}}' placeholder="Check In Date">
+
+														 <div class="icon"><span class="fa fa-calendar"></span></div>
 														</div>
-													</div>
+
+													 </div>
+												   </div>
+												   <div class="col-lg d-flex">
+													<div class="form-group p-4">
+													 <label for="#">Check-out date</label>
+													 <div class="form-field">
+
+													   <input type="text" class="form-control checkout_date" name="check_out_date" id="tommorrow_date"  value='{{tommorow_date|date:"M/d/Y"}}' placeholder="Check Out Date">
+													   <div class="icon"><span class="fa fa-calendar"></span></div>
+													  </div>
+
+												   </div>
+												 </div>
+												 <div class="col-lg d-flex">
+												 <div class="form-group p-4">
+																									<label for="price">Price Limit in ₹</label>
+																									<div class="slidecontainer">
+																									  <input type="range" min="0" max="150000" value="0" class="slider" name="price" id="priceRange">
+																										<span id="demo" style="color:red"></span>
+																									</div>
+																								</div>
 												</div>
-											</div>
-											<div class="col-lg d-flex">
-												<div class="form-group d-flex w-100 border-0">
-													<div class="form-field w-100 align-items-center d-flex">
-														<input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary p-0">
-													</div>
+												<div class="col-lg d-flex">
+												  <div class="form-group d-flex w-100 border-0">
+												   <div class="form-field w-100 align-items-center d-flex">
+													<input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary">
+												  </div>
 												</div>
-											</div>
-										</div>
+												</div>
+												</div>
 									</form>
 								</div>
 							</div>
@@ -559,5 +548,37 @@ output.innerHTML = slider.value; // Display the default slider value
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
+
+$("#today_date").change(function(){
+  t_date = $(this).val()
+  var today_date = new Date(t_date)
+  var result = new Date(t_date);
+  result.setDate(result.getDate() + 1);
+  var dd = String(result.getDate()).padStart(2, '0');
+var mm = String(result.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = result.getFullYear()
+const monthNames = ["0","January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+tm_date = monthNames[parseInt(mm)] + '/' + dd + '/' + yyyy;
+$("#tommorrow_date").val(tm_date)
+$("#today_date").val(monthNames[parseInt(String(today_date.getMonth()+1).padStart(2, '0'))]+"/"+String(today_date.getDate()).padStart(2, '0')+"/"+today_date.getFullYear())
+
+
+
+})
+$("#tommorrow_date").change(function(){
+  t_date = $(this).val()
+  var today_date = new Date(t_date)
+
+const monthNames = ["0","January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+$("#tommorrow_date").val(monthNames[parseInt(String(today_date.getMonth()+1).padStart(2, '0'))]+"/"+String(today_date.getDate()).padStart(2, '0')+"/"+today_date.getFullYear())
+
+
+
+})
 </script>
 {% endblock %}

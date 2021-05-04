@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'blogs',
     'users',
     'django_social_share',
-    'import_export'
+    'import_export',
+    'Tour_app.Booking_check'
 ]
 
 MIDDLEWARE = [

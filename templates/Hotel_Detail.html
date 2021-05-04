@@ -1,0 +1,341 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block style %}
+{% load social_share %}
+<style>
+    .project-tab {
+    padding: 10%;
+    margin-top: -8%;
+}
+.project-tab #tabs{
+    background: #007b5e;
+    color: #eee;
+}
+.project-tab #tabs h6.section-title{
+    color: #eee;
+}
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f15d30;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+.project-tab .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+.project-tab .nav-link:hover {
+    border: none;
+}
+.project-tab thead{
+    background: #f3f3f3;
+    color: #333;
+}
+.project-tab a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: #f2f2f2;
+}
+
+*[role="form"] h2 {
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #f15d30;
+    margin-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+*[role="form"] label{
+color: #f15d30;
+}
+
+   .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+</style>
+{% endblock%}
+{% block body %}
+ <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url({{hotel.image.url}});">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+      <div class="col-md-9 ftco-animate pb-5 text-center">
+       <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span class="mr-2"><a href="/tour_packages">Package <i class="fa fa-chevron-right"></i></a></span> <span>Package Detail <i class="fa fa-chevron-right"></i></span></p>
+       <h1 class="mb-0 bread">{{hotel.name}}</h1>
+     </div>
+   </div>
+ </div>
+</section>
+{% include 'messages.html' %}
+<section class="ftco-section ftco-no-pb">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <div class="search-wrap-1 ftco-animate">
+      <form action="/hotels/{{hotel.pk}}/" method="GET" class="search-property-1">
+       <div class="row no-gutters">
+       
+      <div class="col-lg d-flex">
+       <div class="form-group p-4">
+        <label for="#">Check-in date</label>
+        <div class="form-field">
+          
+          <input type="text" class="form-control checkin_date" name="check_in_date" id="today_date" value='{{todays_date|date:"M/d/Y"}}' placeholder="Check In Date">
+          <div class="icon"><span class="fa fa-calendar"></span></div>
+         </div>
+        
+      </div>
+    </div>
+    <div class="col-lg d-flex">
+      <div class="form-group p-4">
+       <label for="#">Check-out date</label>
+       <div class="form-field">
+         
+         <input type="text" class="form-control checkout_date" name="check_out_date" id="tommorrow_date"  value='{{tommorow_date|date:"M/d/Y"}}' placeholder="Check Out Date">
+         <div class="icon"><span class="fa fa-calendar"></span></div>
+        </div>
+      
+     </div>
+   </div>
+    
+
+ <div class="col-lg d-flex">
+   <div class="form-group d-flex w-100 border-0">
+    <div class="form-field w-100 align-items-center d-flex">
+     <input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary">
+   </div>
+ </div>
+ </div>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="container">
+
+    <div class="row">
+
+          <div class="col-lg-12 ftco-animate py-md-5 mt-md-5">
+            {% include 'messages.html' %}
+
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-rooms" role="tab" aria-controls="nav-home" aria-selected="true">Rooms</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-hotel-detail" role="tab" aria-controls="nav-profile" aria-selected="false">Hotels Details</a>
+
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-rooms" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+
+                                            <th width="30%">Room Name & Details</th>
+                                            <th>Room Image</th>
+                                            <th width="25%">Room Amenities</th>
+                                            <th width="20%">Room Cost</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for room in rooms %}
+                                        <tr>
+
+                                            <td width="30%"><h4>{{room.type}}</h4>
+                                            <p style="color:#f15d30">{{room.bed_details}}</p>
+                                            <p style="color:#f15d30">{{room.capacity}}</p>
+                                            </td>
+                                            <td><img src="{{room.image.url}}" class="img-fluid rounded" width="60%"/></td>
+                                            <td width="25%">
+                                                    <ul style=" list-style-type: none;width:100%">
+                                                    {% for ame in room.Amenities%}
+
+                                                        <li><span class="fa fa-check" style="color:#f15d30"></span> {{ame}}</li>
+                                                    {% endfor %}
+
+                                                </ul>
+                                            </td>
+                                            <td width="20%" style="color:#f15d30">₹ {{room.price}}/night
+                                                <br/>
+                                                <form action="/book_room/" method="post">{% csrf_token %}
+                                                    <input type="hidden" value="{{room.pk}}" name="room_id">
+                                                    <input type="hidden" name="hidden_checkin" id="hidden_checkin" value='{{todays_date|date:"M/d/Y"}}'>
+                                                    <input type="hidden" name="hidden_checkout" id="hidden_checkout" value='{{tommorow_date|date:"M/d/Y"}}'>
+                                                    <select name="no_of_rooms" class="my-3">
+                                                    <option>Select No of Rooms</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                                <button href="/" class="btn btn-primary">Book Now</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                      {% endfor%}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-hotel-detail" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <div class="card-columns my-4 py-4">
+                                          <div class="card bg-primary ">
+                                            <div class="card-body text-center" style="color:#fff;font-weight:bold">
+                                                <h3 style="color:#fff;font-weight:bold;font-size:1.5rem" >Location</h3>
+                                              <p class="card-text"> {{hotel.location}} , {{hotel.country}}</p>
+                                            </div>
+                                          </div>
+
+                                     <div class="card bg-primary ">
+                                            <div class="card-body text-center" style="color:#fff;font-weight:bold">
+                                                <h3 style="color:#fff;font-weight:bold;font-size:1.5rem" > Rating </h3>
+                                              <p class="card-text"> {{hotel.rating}}/5 <span class="fa fa-star"></span>  Rating</p>
+                                            </div>
+                                          </div>
+                                </div>
+                                <div class="container">
+
+
+  <!-- Each carousel needs a unique ID -->
+  <div id="carousel-id" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img src="{% static 'images/Hotel_1.jpg'%}" alt="First slide" class="img-fluid">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Hotel_2.jpg'%}" alt="First slide" class="img-fluid">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Hotel_1.jpg'%}" alt="First slide" class="img-fluid">
+      </div>
+    </div>
+
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+    <p class="text-xs-center">
+      <a class="" href="#carousel-id" role="button" data-slide="prev">
+        <span class="icon-prev" aria-hidden="true"></span> Previous
+      </a>&emsp;
+      <a class="l" href="#carousel-id" role="button" data-slide="next">
+        <span class="icon-next" aria-hidden="true"></span> Next
+      </a>
+    </p>
+    <!-- /.text-center -->
+  </div>
+<!-- /.carousel -->
+
+</div>
+<!-- /.container -->
+
+                        </div>
+
+      </div>
+
+
+      </div> <!-- .col-md-8 -->
+
+      </div>
+
+  </div>
+
+</section> <!-- .section -->
+
+<section class="ftco-intro ftco-section ftco-no-pt">
+ <div class="container">
+  <div class="row justify-content-center">
+   <div class="col-md-12 text-center">
+    <div class="img"  style="background-image: url({% static 'images/bg_2.jpg' %});">
+     <div class="overlay"></div>
+     <h2>We Are Pacific A Travel Agency</h2>
+     <p>We can manage your dream building A small river named Duden flows by their place</p>
+     <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+   </div>
+ </div>
+</div>
+</div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script>
+
+
+$("#today_date").change(function(){
+  t_date = $(this).val()
+  var today_date = new Date(t_date)
+  var result = new Date(t_date);
+  result.setDate(result.getDate() + 1);
+  var dd = String(result.getDate()).padStart(2, '0');
+var mm = String(result.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = result.getFullYear()
+const monthNames = ["0","January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+tm_date = monthNames[parseInt(mm)] + '/' + dd + '/' + yyyy;
+$("#tommorrow_date").val(tm_date)
+$("#today_date").val(monthNames[parseInt(String(today_date.getMonth()+1).padStart(2, '0'))]+"/"+String(today_date.getDate()).padStart(2, '0')+"/"+today_date.getFullYear())
+$("#hidden_checkin").val(monthNames[parseInt(String(today_date.getMonth()+1).padStart(2, '0'))]+"/"+String(today_date.getDate()).padStart(2, '0')+"/"+today_date.getFullYear());
+$("#hidden_checkout").val(tm_date);
+
+
+})
+$("#tommorrow_date").change(function(){
+  t_date = $(this).val()
+  var today_date = new Date(t_date)
+
+const monthNames = ["0","January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+$("#tommorrow_date").val(monthNames[parseInt(String(today_date.getMonth()+1).padStart(2, '0'))]+"/"+String(today_date.getDate()).padStart(2, '0')+"/"+today_date.getFullYear())
+
+
+
+})
+</script>
+
+{% endblock %}

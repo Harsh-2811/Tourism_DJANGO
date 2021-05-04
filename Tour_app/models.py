@@ -1,12 +1,16 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.db.models import Min, Count, Sum
 from django.dispatch import receiver
+from django.utils import timezone
 from multiselectfield import MultiSelectField
 from django.contrib.postgres.fields import ArrayField
 
 from django.utils.timezone import now
 # Create your models here.
+from users.models import CustomUser
+
 
 class Countries(models.Model):
 
@@ -92,26 +96,48 @@ class Hotel(models.Model):
     image = models.ImageField(upload_to='image')
     rating = models.IntegerField(default=1)
     no_of_rating = models.IntegerField(default=10)
+    checkin_time = models.TimeField(default=timezone.now)
+    checkout_time = models.TimeField(default=timezone.now)
 
     def __str__(self):
         return self.name
 
-    def total_rooms(self):
+    def rooms_types(self):
         rooms = Room.objects.filter(hotel=self)
         room_list = []
         for room in rooms:
             room_list.append(room)
         return room_list
 
+
+    def get_low_cost_room(self):
+
+        price = Room.objects.filter(hotel=self).aggregate(Min('price'))
+        if price['price__min']:
+            return price['price__min']
+        else:
+            return 0
+
 class Room(models.Model):
 
+    Amenities_List = [
+        ('Air Conditioning','Air Conditioning'),
+        ('Free Wi-Fi','Free Wi-Fi'),
+        ('Restaurant/Coffee Shop','Restaurant/Coffee Shop'),
+        ('CCTV','CCTV'),
+        ('Room Service','Room Service'),
+        ('Swimming Pool','Swimming Pool'),
+    ]
+
     id = models.AutoField(primary_key=True)
+    room_no = models.CharField(max_length=500,default="")
     type = models.CharField(max_length=200)
     hotel = models.ForeignKey(Hotel,on_delete=models.CASCADE)
     image = models.ImageField(upload_to='image')
-    price= models.DecimalField(max_digits=5,decimal_places=2)
+    price= models.DecimalField(max_digits=10,decimal_places=2)
     bed_details = models.CharField(max_length=30)
     capacity = models.CharField(max_length=30)
+    Amenities = MultiSelectField(choices=Amenities_List,default=" ")
 
     def __str__(self):
         return self.type
@@ -154,6 +180,20 @@ class Tour_Inquiry(models.Model):
         return "{} has sent inquiry about {}".format(self.name,self.package)
 
 
+class Booking(models.Model):
+    id = models.AutoField(primary_key=True)
+    room = models.ForeignKey(Room,on_delete=models.CASCADE)
+    hotel = models.ForeignKey(Hotel,on_delete=models.CASCADE)
+    person = models.ForeignKey(CustomUser,on_delete=models.DO_NOTHING)
+    no_of_rooms = models.IntegerField()
+    amount_paid = models.DecimalField(max_digits=10,decimal_places=2)
+    check_in  = models.DateField()
+    check_out  = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "{} has booked {} rooms of type {}".format(self.person,self.no_of_rooms,self.room)
 
 
 

@@ -9,4 +9,7 @@ urlpatterns = [
     path('about/', about,name="about"),
     path('search/', search,name="search"),
     path('submit_inquiry/', submit_inquiry,name="submit_inquiry"),
+    path('hotels/', hotels,name="hotels"),
+    path('hotels/<int:id>/', hotel_detail,name="hotel_detail"),
+    path('book_room/', book_room,name="book_room"),
 ]
