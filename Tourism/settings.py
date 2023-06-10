@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('TOUR_SECERET_KEY')
+SECRET_KEY = "7WYX172LTYd1SNHdoOL505JZyJfSHfQnjVEkk9haV"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -86,28 +86,24 @@ WSGI_APPLICATION = 'Tourism.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-"""
+
 DATABASES = {
 'default': {
-
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'Tour',
+        'NAME': 'tourism',
 
-        'USER':os.environ.get('Tourism_DATABASE_USERNAME'),
+        'USER':"postgres",
 
-        'PASSWORD': os.environ.get('Tourism_DATABASE_PASSWORD'),
+        'PASSWORD': "Harsh@2811",
 
         'HOST': 'localhost',
-
-
-
     }
 }
-"""
-DATABASES = {
-'default': dj_database_url.config(default='postgres://{}:{}@localhost/{}'.format(os.environ.get('Tourism_DATABASE_USERNAME'),os.environ.get('Tourism_DATABASE_PASSWORD'),'Tour'))
-}
+
+# DATABASES = {
+# 'default': dj_database_url.config(default='postgres://{}:{}@localhost/{}'.format(os.environ.get('Tourism_DATABASE_USERNAME'),os.environ.get('Tourism_DATABASE_PASSWORD'),'Tour'))
+# }
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
